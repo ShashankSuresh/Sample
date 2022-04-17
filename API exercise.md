@@ -21,9 +21,21 @@ curl --request GET \
 ```
 ### Answer #1: 
 
-`The request lacks user authenticationas as part of validation.Using the above URL GET method will try to retrieve information from the server to which we must include URL with the JWT token in the authorisation header.
-Here, we are not sending the token for the above request in the Authorization header due to which we are thrown with the mentioned error.
-for the rectification of the above issue, Created a token using the Front API token and vaslidated the URL and bearer token in the postman.`
+`The Authentication documentation states that The Core API uses API tokens to authenticate its user.
+The HTTP authentication scheme is carried out by the Bearer authentication. Hence the Authorization header must include the JWT token for each and every request under the below format:
+
+Curl example:
+
+--header 'Authorization: Bearer [REQUEST_TOKEN]'
+
+The example above is a GET request without the Bearer token in the Authentication Header. Hence the request fails with an error “JSON Web Token error”.
+
+In order to solve this, one can create a valid API token from Front's API settings. (Please refer to the screengrab below)
+
+Ref:
+https://dev.frontapp.com/docs/authentication
+https://help.front.com/t/36dsxd/how-to-create-and-revoke-api-tokens
+`
 
 ![alt text](JWTToken.JPG)
 
