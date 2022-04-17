@@ -99,6 +99,7 @@ curl --request POST \
 For the given POST request we could see that the Author_id is STRING type and we have not enclosed it with the double inverted commas due to which we received an error "message": "Unexpected token a in JSON at position 109". Concentrating on the data rtype could avoid these kinds of issues.
 
 ![alt text](Q3-Screenshot1.JPG)
+![alt text](Q3-Screenshot2.JPG)
 
 ---
 ## Question #4:
