@@ -180,6 +180,7 @@ curl --request PATCH \
 
 PATCH method is used for making partial changes to an existing resource. In the above request the ```tag_ids``` parameter is a ```string``` but as per the documentation it's supposed to be an ```array of strings```. Updating this will result in a 200 OK response. 
 
+![alt text](TagArray.JPG)
 
 ![alt text](ScreenshotQ5.JPG)
 
@@ -217,6 +218,8 @@ curl --request POST \
 The reason why the above API Post request fails with the "message": "Unknown conversation ID cn_123" is because, the type of a conversation ID is ```cnv_:number``` but we are passing it as ```cn_123```. 
 
 By introducting schema validation libraries such as Yup or Joi will help capture the invalid schema even before firing an API call.
+
+![alt text](CNVFormat.JPG)
 
 ![alt text](Q6Screenshot1.JPG)
 
