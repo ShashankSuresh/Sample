@@ -166,7 +166,7 @@ curl --request PATCH \
 PATCH method is used for making the partial changes to an existing resources.Here, We are trying to modify the Conversations wherein from the mentioned body parameters Tag_ids is the "Array of String" but we are passing one string due to which we received 400 bad request.
 By reiterating the requirements passed in the bosy parameters we can avoid these issues. 
 
-![alt text](ScreenshotQ2.JPG)
+![alt text](ScreenshotQ5.JPG)
 
 ---
 ## Question #6:
