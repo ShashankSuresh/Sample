@@ -34,8 +34,8 @@ The example above is a GET request without the Bearer token in the Authenticatio
 In order to solve this, one can create a valid API token from Front's API settings. (Please refer to the screengrab below)
 
 Ref:
-- https://dev.frontapp.com/docs/authentication
-- https://help.front.com/t/36dsxd/how-to-create-and-revoke-api-tokens`
+- https://help.front.com/t/36dsxd/how-to-create-and-revoke-api-tokens
+`
 
 ![alt text](JWTToken.JPG)
 
