@@ -149,7 +149,7 @@ curl --request POST \
 ```
 ### Answer #4: 
 
-POST requests are used to send data to the API server to create or update the resource. The data sent to the server is stored in the request body of the HTTP request. Here, we could see that the body is not defined properly. Body paramters has NAME as a String and TEAMMATES_IDS as array of String and we see that "Name" String is not added in the body of the request due to which we received the 400 bad request error. While dealing with POST method we need to validate the parameters passed to the Server.
+POST requests are used to send data to the API server to create or update the resource. The data sent to the server is stored in the request body of the HTTP request. As per the documentation, for this request the ```name``` parameter is mandatory of type ```string```. We see that ```name``` parameter is not added in the body of the request due to which we received the 400 bad request error. While dealing with POST method we need to validate the parameters passed to the API request.
 
 ![alt text](Q4-Screenshot1.JPG)
 
