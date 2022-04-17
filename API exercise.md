@@ -22,7 +22,7 @@ curl --request GET \
 ### Answer #1: 
 
 
-`The Authentication documentation states that The Core API uses API tokens to authenticate its user.
+The Authentication documentation states that The Core API uses API tokens to authenticate its user.
 The HTTP authentication scheme is carried out by the Bearer authentication. Hence the Authorization header must include the JWT token for each and every request under the below format:
 
 Curl example: ``` --header 'Authorization: Bearer [REQUEST_TOKEN]' ```
@@ -30,7 +30,7 @@ Curl example: ``` --header 'Authorization: Bearer [REQUEST_TOKEN]' ```
 The example above is a GET request without the Bearer token in the Authentication Header. Hence the request fails with an error “JSON Web Token error”.
 In order to solve this, one can create a valid API token from Front's API settings. (Please refer to the screengrab below)
 
-Ref: https://help.front.com/t/36dsxd/how-to-create-and-revoke-api-tokens`
+Ref: https://help.front.com/t/36dsxd/how-to-create-and-revoke-api-tokens
 
 
 ![alt text](JWTToken.JPG)
@@ -70,11 +70,13 @@ curl --request POST \
 ```
 ### Answer #2: 
 
-`Front’s API RPM limit depends on factors such as Customer Relationship plans (Starter, Prime, Enterprise), authentication type (OAuth) and the integration as well. 
+Front’s API RPM limit depends on factors such as Customer Relationship plans (Starter, Prime, Enterprise), authentication type (OAuth) and the integration as well. 
+
 In this example, the reason why we are thrown with an error ‘status: 429 and message: Rate limit exceeded for tier-2 route. Please retry in 341 milliseconds.’ Is because the POST method of tire-2 which is resource intensive routes are limited to 5 requests per resources per second for an endpoint. When we exceed the given rate limits, we receive 429 status code X-Front-Tier followed by header Retry-After how many seconds you need to wait before you can retry the request.
+
 In order to avoid the error, we should check for the failures and make sure we increase the API rate limit beyond the limit provided for the respective plan. To make necessary modifications to the API’s rate limit one should contact their customer success manager or account manager or Front’s support team at support@frontapp.com.
+
 Please refer to the below Postman response screengrab where the rate limit parameters are seen.  
-`
 
 ![alt text](ScreenshotQ2.JPG)
 
