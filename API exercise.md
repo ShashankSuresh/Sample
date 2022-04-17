@@ -2,15 +2,13 @@
 
 This exercise tests a candidate's ability to troubleshoot issues around requests to [Front's Core API](https://dev.frontapp.com/docs/core-api-overview).  Use the linked documentation as reference to explain why the requests failed and suggest a solution.
 
-`
-Note: Please find the below actions carried out as a part of the preparation: 
+`Note: Please find the below actions carried out as a part of the preparation: 
 - Created a developer’s account in Front. 
 - Created a few JWT tokens for authentication. 
 - Validated the above created tokens in jwt.io using the secret API key mentioned in the API section. 
 - Using the Front’s Core API’s Postman collection, I added the JWT token and also tried hitting a few API calls to understand the request/response.
 - Clarification: Since I did not have the Core API’s local setup, I was not receiving 200 OK response for the APIs instead was getting a 404 Not Found which I believe is pointing to the conversation ID being fetched and not the API.
 `
-
 
 ## Question #1:
 
