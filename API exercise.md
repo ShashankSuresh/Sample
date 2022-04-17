@@ -74,9 +74,10 @@ curl --request POST \
 ```
 ### Answer #2: 
 
-`Customer depending upon the plan have different rate limits for the messages. Here, for the POST method of tire-2 which is resource intensive routes are limited to 5 requests per resources per second for an endpoint. When we exceed the given rate limits we recieve 429 status code X-Front-Tier followed by header Retry-After how many seconds you need to wait before you can retry the request.
-In order to avoid the error we should,
-check for the failures and make sure we increase the API rate limit beyond the limit provided by respected plan, have a word with customer success or account manager, or email support@frontapp.com.`
+`Front’s API RPM limit depends on factors such as Customer Relationship plans (Starter, Prime, Enterprise), authentication type (OAuth) and the integration as well. 
+In this example, the reason why we are thrown with an error ‘status: 429 and message: Rate limit exceeded for tier-2 route. Please retry in 341 milliseconds.’ Is because the POST method of tire-2 which is resource intensive routes are limited to 5 requests per resources per second for an endpoint. When we exceed the given rate limits, we receive 429 status code X-Front-Tier followed by header Retry-After how many seconds you need to wait before you can retry the request.
+In order to avoid the error, we should check for the failures and make sure we increase the API rate limit beyond the limit provided for the respective plan. To make necessary modifications to the API’s rate limit one should contact their customer success manager or account manager or Front’s support team at support@frontapp.com.
+`
 
 ![alt text](ScreenshotQ2.JPG)
 
