@@ -201,6 +201,7 @@ curl --request POST \
 
 In the Path Parameters conversation ID string is defined as CNV_123 but we are passing CN_123 in the URL due to which we received error message as "Unknown conversation ID cn_123".
 
+
 ![alt text](ScreenshotQ6.JPG)
 
 ---
