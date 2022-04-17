@@ -66,6 +66,8 @@ curl --request POST \
 In order to avoid the error we should,
 check for the failures and make sure we increase the API rate limit beyond the limit provided by respected plan, have a word with customer success or account manager, or email support@frontapp.com.`
 
+![alt text](Q2-Screenshot1.JPG)
+
 ---
 ## Question #3:
 
@@ -134,6 +136,8 @@ curl --request POST \
 
 POST requests are used to send data to the API server to create or update the resource. The data sent to the server is stored in the request body of the HTTP request. Here, we could see that the body is not defined properly. Body paramters has NAME as a String and TEAMMATES_IDS as array of String and we see that "Name" String is not added in the body of the request due to which we received the 400 bad request error. While dealing with POST method we need to validate the parameters passed to the Server.
 
+![alt text](Q4-Screenshot1.JPG)
+
 ---
 ## Question #5:
 
@@ -161,6 +165,8 @@ curl --request PATCH \
 
 PATCH method is used for making the partial changes to an existing resources.Here, We are trying to modify the Conversations wherein from the mentioned body parameters Tag_ids is the "Array of String" but we are passing one string due to which we received 400 bad request.
 By reiterating the requirements passed in the bosy parameters we can avoid these issues. 
+
+![alt text](Q5-Screenshot1.JPG)
 
 ---
 ## Question #6:
@@ -194,5 +200,7 @@ curl --request POST \
 ### Answer #6: 
 
 In the Path Parameters conversation ID string is defined as CNV_123 but we are passing CN_123 in the URL due to which we received error message as "Unknown conversation ID cn_123".
+
+![alt text](Q6-Screenshot1.JPG)
 
 ---
