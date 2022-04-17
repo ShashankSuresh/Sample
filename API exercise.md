@@ -151,6 +151,8 @@ curl --request POST \
 
 POST requests are used to send data to the API server to create or update the resource. The data sent to the server is stored in the request body of the HTTP request. As per the documentation, for this request the ```name``` parameter is mandatory of type ```string```. We see that ```name``` parameter is not added in the body of the request due to which we received the 400 bad request error. While dealing with POST method we need to validate the parameters passed to the API request.
 
+![alt text](NameParams.JPG)
+
 ![alt text](Q4-Screenshot1.JPG)
 
 ---
@@ -178,8 +180,8 @@ curl --request PATCH \
 ```
 ### Answer #5: 
 
-PATCH method is used for making the partial changes to an existing resources.Here, We are trying to modify the Conversations wherein from the mentioned body parameters Tag_ids is the "Array of String" but we are passing one string due to which we received 400 bad request.
-By reiterating the requirements passed in the bosy parameters we can avoid these issues. 
+PATCH method is used for making partial changes to an existing resource. In the above request the ```tag_ids``` parameter is a ```string``` but as per the documentation it's supposed to be an ```array of strings```. Updating this will result in a 200 OK response. 
+
 
 ![alt text](ScreenshotQ5.JPG)
 
@@ -214,7 +216,9 @@ curl --request POST \
 ```
 ### Answer #6: 
 
-In the Path Parameters conversation ID string is defined as CNV_123 but we are passing CN_123 in the URL due to which we received error message as "Unknown conversation ID cn_123".
+The reason why the above API Post request fails with the "message": "Unknown conversation ID cn_123" is because, the type of a conversation ID is ```cnv_:number``` but we are passing it as ```cn_123```. 
+
+By introducting schema validation libraries such as Yup or Joi will help capture the invalid schema even before firing an API call.
 
 ![alt text](Q6Screenshot1.JPG)
 
