@@ -66,7 +66,7 @@ curl --request POST \
 In order to avoid the error we should,
 check for the failures and make sure we increase the API rate limit beyond the limit provided by respected plan, have a word with customer success or account manager, or email support@frontapp.com.`
 
-![alt text](Q2-Screenshot1.JPG)
+![alt text](ScreenshotQ2.JPG)
 
 ---
 ## Question #3:
@@ -201,6 +201,6 @@ curl --request POST \
 
 In the Path Parameters conversation ID string is defined as CNV_123 but we are passing CN_123 in the URL due to which we received error message as "Unknown conversation ID cn_123".
 
-![alt text](Q6-Screenshot1.JPG)
+![alt text](ScreenshotQ2.JPG)
 
 ---
