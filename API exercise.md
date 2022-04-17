@@ -25,6 +25,8 @@ curl --request GET \
 Here, we are not sending the token for the above request in the Authorization header due to which we are thrown with the mentioned error.
 for the rectification of the above issue, Created a token using the Front API token and vaslidated the URL and bearer token in the postman.`
 
+![alt text](JWTToken.JPG)
+
 ---
 
 ## Question #2:
