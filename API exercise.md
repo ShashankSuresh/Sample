@@ -22,7 +22,7 @@ curl --request GET \
 ### Answer #1: 
 
 
-`The Authentication documentation states that The Core API uses API tokens to authenticate its user.
+> The Authentication documentation states that The Core API uses API tokens to authenticate its user.
 The HTTP authentication scheme is carried out by the Bearer authentication. Hence the Authorization header must include the JWT token for each and every request under the below format:
 
 Curl example:
@@ -35,7 +35,7 @@ In order to solve this, one can create a valid API token from Front's API settin
 
 Ref:
 - https://help.front.com/t/36dsxd/how-to-create-and-revoke-api-tokens
-`
+
 
 ![alt text](JWTToken.JPG)
 
